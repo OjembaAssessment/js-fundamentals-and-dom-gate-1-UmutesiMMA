@@ -20,30 +20,30 @@ window.addEventListener("DOMContentLoaded", function(){
         fiveWords.push(arr2[j][0])
     }
 
-    console.log(fiveWords)
-    for (let i in para){
+    let word = para.childNodes
+    word.forEach((elt)=>{
+        if(elt.nodeName === "#text"){
+            let segment = elt.textContent.split(" ")
         
-    }
-
-    // let word = para.childNodes
-    // word.forEach((elt)=>{
-    //     if(elt.nodeName === "#text"){
-    //         let segment = elt.textContent.split(" ")
+            highlight(segment)
+        }
+        function highlight(text){
+            for (let i =0; i<text.length;i++){
+                if (fiveWords.includes(text[i])){
+                    console.log(text[i])
+                    let newpara = document.createElement("p");
+                    newpara.textContent = text[i];
+                    newpara.style.backgroundColor="yellow"
+                    para.append(newpara)
+                    
+                }
+            }
+        }
         
-    //         highlight(segment)
-    //     }
         
     })
+})
 
-    // function highlight(text){
-    //     for (let i =0; i<text.length;i++){
-    //         if (fiveWords.includes(text[i])){
-    //             console.log(text[i])
-                
-    //         }
-    //     }
-    // }
-    
     
 
     
