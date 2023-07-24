@@ -2,3 +2,14 @@
     color: red;
     font-size: 64px;
 }
+button{
+    padding:20px;
+    margin-bottom: 40px;
+}
+input{
+    padding: 20px;
+}
+#reset{
+    margin-right: 70px;
+    margin-left: 40px;
+}
