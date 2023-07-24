@@ -21,6 +21,9 @@ window.addEventListener("DOMContentLoaded", function(){
     }
 
     console.log(fiveWords)
+    for (let i in para){
+        
+    }
 
     // let word = para.childNodes
     // word.forEach((elt)=>{
